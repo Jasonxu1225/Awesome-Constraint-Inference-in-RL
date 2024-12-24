@@ -20,10 +20,9 @@ An effective approach to resolve the above challenges is Inverse Constrained Rei
 
 In typical preference modeling approach, the agent must first recover the rewards optimized and constraints respected by expert agents, and imitate experts by optimizing the Constrained Reinforcement Learning (CRL) objective under these constraints. This is a challenging task since there might be various equivalent combinations of reward distributions and constraints that can explain the same expert demonstrations. Striving for identifiability, ICRL algorithms simplify the problem by assuming that rewards are observable, and the goal is to recover only the constraints that best explain the expert data. The inference process of ICRL often involves alternating between updating an imitating policy and updating a constraint function. The following figure summarizes the main procedure of ICRL.
 
-<div style="display: flex; justify-content: center; align-items: center; height: 100%; text-align: center;">
-    <img src="./figures/flowchart.png" alt="flowchart" style="transform: scale(0.5); display: block;" />
-</div>
-
+<p align="center">
+  <img src="./figures/flowchart.png" alt="flowchart" style="width:50%;"/>
+</p>
 
 ## Papers
 
