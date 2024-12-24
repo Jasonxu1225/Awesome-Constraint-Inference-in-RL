@@ -81,7 +81,7 @@ In typical preference modeling approach, the agent must first recover the reward
   - Introduced a method for inferring constraints from operator input, along with a confidence-based way of assisting the user in maintaining them, and evaluate in a user study
   - `Trajectory-oriented Constraints`
 
-  ### Constraint Inference from human interventions
+### Constraint Inference from human interventions
 
 - [Learning Constraints on Autonomous Behavior from Proactive Feedback](https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=10341801) [IROS 2023]
 
@@ -96,6 +96,6 @@ In typical preference modeling approach, the agent must first recover the reward
   - Formalized interventions as action-value constraints
   - `Intervention Consrtaints`
 
-  ### Inverse Constrained Reinforcement Learning
+### Inverse Constrained Reinforcement Learning
 
   Coming soon...
