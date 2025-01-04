@@ -83,7 +83,7 @@ In typical preference modeling approach, the agent must first recover the reward
   - Introduced a method for inferring constraints from operator input, along with a confidence-based way of assisting the user in maintaining them, and evaluate in a user study
   - `Trajectory-oriented Constraints`
 
-### Constraint Inference from human interventions
+### Constraint Inference from Human Interventions
 
 - [Learning Constraints on Autonomous Behavior from Proactive Feedback](https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=10341801) [IROS 2023]
 
@@ -100,4 +100,96 @@ In typical preference modeling approach, the agent must first recover the reward
 
 ### Inverse Constrained Reinforcement Learning
 
-  Coming soon...
+#### ICRL in Deterministic Environments
+
+- [Maximum Likelihood Constraint Inference for Inverse Reinforcement Learning](https://arxiv.org/pdf/1909.05477) [ICLR 2020]
+
+  - Dexter R.R. Scobee, S. Shankar Sastry
+
+  - Inferred the maximum likelihood constraint to best explain observed behavior under the maximum entropy principle
+
+  - `Maximum Entropy` `Discrete`
+
+- [Inverse Constrained Reinforcement Learning](http://proceedings.mlr.press/v139/malik21a/malik21a.pdf) [ICML 2021]
+
+  - Shehryar Malik, Usman Anwar, Alireza Aghasi, Ali Ahmed
+
+  - Proposed learning a binary classifier as a feasibility function approximator to determine the probability that performing action a under state s is feasible
+
+  - `Maximum Entropy` `Continuous`
+
+- [Positive-Unlabeled Constraint Learning for Inferring Nonlinear Continuous Constraints Functions From Expert Demonstrations](http://proceedings.mlr.press/v139/malik21a/malik21a.pdf) [RAL 2024]
+
+  - Baiyu Peng, Aude Billard
+
+  - Proposed a two-step Positive-Unlabeled Constraint Learning (PUCL) method to identify reliable infeasible data and then trained a binary feasibility classifier as a constraint function
+
+  - `Positive-Unlabeled Learnin`
+
+#### ICRL in Stochastic Environments
+
+- [Maximum likelihood constraint inference from stochastic demonstrations](https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=9658862) [CCTA 2021]
+
+  - David L. McPherson, Kaylene C. Stocking, S. Shankar Sastry
+
+  - Generalized maximum entropy ICRL to stochastic environments by modeling the causal entropy
+
+  - `Maximum Causal Entropy` `Discrete`
+
+- [Maximum causal entropy inverse constrained reinforcement learning](https://arxiv.org/pdf/2305.02857) [Arxiv 2023]
+
+  - Mattijs Baert, Pietro Mazzaglia, Sam Leroux, Pieter Simoens
+
+  - Generalized maximum causal entropy ICRL to continuous environments by utilizing a feasibility neural network
+  - `Maximum Causal Entropy` `Continuous`
+
+- [Learning soft constraints from constrained expert demonstrations](https://arxiv.org/pdf/2206.01311) [ICLR 2023]
+
+  - Ashish Gaurav, Kasra Rezaee, Guiliang Liu, Pascal Poupart
+
+  - Employed the Deep Constraint Correction framework to learn soft constraints, which transforms a constrained problem into an unconstrained problem by introducing a non-differentiable ReLU term
+
+  - `Soft Constraints` `Continuous`
+
+#### ICRL from Limited Demonstrations
+
+- [Benchmarking constraint inference in inverse reinforcement learning](https://arxiv.org/pdf/2206.09670) [ICLR 2023]
+
+  - Guiliang Liu, Yudong Luo, Ashish Gaurav, Kasra Rezaee, Pascal Poupart
+
+  - Inferred the approximated posterior distributions of constraints to capture uncertainty in the demonstration dataset through Dirichlet VAE
+  - `Variational Inference` `Uncertainty-aware`
+
+- [Confidence aware inverse constrained reinforcement learning](https://arxiv.org/pdf/2406.16782) [ICML 2024]
+
+  - Sriram Ganapathi Subramanian, Guiliang Liu, Mohammed Elmahgiubi, Kasra Rezaee, Pascal Poupart
+
+  - Ensured that only those constraints that meet a desired confidence threshold are utilized by incorporating a confidence level alongside a set of expert demonstrations
+
+  -  `Confidence-aware`
+
+- [Uncertainty-aware Constraint Inference in Inverse Constrained Reinforcement Learning](https://openreview.net/pdf?id=ILYjDvUM6U) [ICLR 2024]
+
+  - Sheng Xu, Guiliang Liu
+
+  - Proposed expanding the training dataset by adding generated trajectories through flow-based trajectory generation based on GFlowNets
+
+  -  `Data-augmented` `Uncertainty-aware`
+
+- [Learning Constraints from Offline Demonstrations via Superior Distribution Correction Estimation](https://openreview.net/pdf?id=Ax90jQPbgF) [ICML 2024]
+
+  - Guorui Quan, Guiliang Liu
+
+  - Considered the offline setting where the agent has no access to the environment for interactions, which transferred the constraint inference problem to the problem of estimating the superior distributions set
+
+  -  `Offline`
+
+- [Bayesian Constraint Inference from User Demonstrations Based on Margin-Respecting Preference Models](https://arxiv.org/pdf/2403.02431) [ICRA 2024]
+
+  - Dimitris Papadimitriou, Daniel S. Brown
+
+  - Explored an alternative scenario in which preferences among demonstrations are available by extending the Bradley-Terry model to the context of constraint inference
+
+  -  `Preference-based`
+
+Continuing...
