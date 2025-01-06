@@ -8,56 +8,19 @@ This repository will be continuously updated. Welcome to follow and star it!
 
 ## Table of Contents
 
-1. **Introduction**
-   - [Overview](#awesome-constraint-inference-in-rl)
-   - [Importance of Inferring Constraints](#importance-of-inferring-constraints)
-   - [Procedure of ICRL](#procedure-of-icrl)
+- [Awesome-Constraint-Inference-in-RL](#awesome-constraint-inference-in-rl)
+  - [Importance of Inferring Constraints](#importance-of-inferring-constraints)
+  - [Procedure of ICRL](#procedure-of-icrl)
+  - [Papers](#papers)
+    - [Constraint Inference in Inverse Optimal Control](#constraint-inference-in-inverse-optimal-control)
+    - [Constraint Inference from Human Interventions](#constraint-inference-from-human-interventions)
+    - [Inverse Constrained Reinforcement Learning](#inverse-constrained-reinforcement-learning)
+      - [ICRL in Deterministic Environments](#icrl-in-deterministic-environments)
+      - [ICRL in Stochastic Environments](#icrl-in-stochastic-environments)
+      - [ICRL from Limited Demonstrations](#icrl-from-limited-demonstrations)
+      - [ICRL for Both Rewards and Constraints](#icrl-for-both-rewards-and-constraints)
+      - [ICRL from Multiple Expert Agents](#icrl-from-multiple-expert-agents)
 
-2. **Constraint Inference in Inverse Optimal Control**
-   - [Learning Constraints from Demonstrations](#learning-constraints-from-demonstrations)
-   - [Learning Parametric Constraints](#learning-parametric-constraints)
-   - [Uncertainty-aware Constraint Learning](#uncertainty-aware-constraint-learning)
-   - [Constraint Inference in Control Tasks](#constraint-inference-in-control-tasks)
-   - [Efficient Learning of Constraints](#efficient-learning-of-constraints)
-   - [Learning Geometric Constraints](#learning-geometric-constraints)
-   - [Isoperimetric Constraint Inference](#isoperimetric-constraint-inference)
-   - [Trajectory-oriented Constraints](#trajectory-oriented-constraints)
-   - [Inferring Constraints in Shared Autonomy](#inferring-and-assisting-with-constraints-in-shared-autonomy)
-
-3. **Constraint Inference from Human Interventions**
-   - [Learning Constraints from Feedback](#learning-constraints-on-autonomous-behavior-from-proactive-feedback)
-   - [Expert Intervention Learning](#expert-intervention-learning)
-
-4. **Inverse Constrained Reinforcement Learning**
-   - **ICRL in Deterministic Environments**
-     - [Maximum Likelihood Constraint Inference](#maximum-likelihood-constraint-inference-for-inverse-reinforcement-learning)
-     - [Inverse Constrained Reinforcement Learning](#inverse-constrained-reinforcement-learning)
-     - [Positive-Unlabeled Constraint Learning](#positive-unlabeled-constraint-learning-for-inferring-nonlinear-continuous-constraints-functions-from-expert-demonstrations)
-     - [Simplifying Constraint Inference](#simplifying-constraint-inference-with-inverse-reinforcement-learning)
-     - [Efficient Exploration in ICRL](#provably-efficient-exploration-in-inverse-constrained-reinforcement-learning)
-   - **ICRL in Stochastic Environments**
-     - [Maximum Likelihood Constraint Inference in Stochastic Environments](#maximum-likelihood-constraint-inference-from-stochastic-demonstrations)
-     - [Maximum Causal Entropy ICRL](#maximum-causal-entropy-inverse-constrained-reinforcement-learning)
-     - [Learning Soft Constraints](#learning-soft-constraints-from-constrained-expert-demonstrations)
-     - [Robust ICRL](#robust-inverse-constrained-reinforcement-learning-under-model-misspecification)
-   - **ICRL from Limited Demonstrations**
-     - [Bayesian Methods for Constraint Inference](#bayesian-methods-for-constraint-inference-in-reinforcement-learning)
-     - [Benchmarking Constraint Inference](#benchmarking-constraint-inference-in-inverse-reinforcement-learning)
-     - [Confidence-aware ICRL](#confidence-aware-inverse-constrained-reinforcement-learning)
-     - [Uncertainty-aware Constraint Inference](#uncertainty-aware-constraint-inference-in-inverse-constrained-reinforcement-learning)
-     - [Learning Constraints from Offline Demonstrations](#learning-constraints-from-offline-demonstrations-via-superior-distribution-correction-estimation)
-     - [Preference-based Constraint Inference](#bayesian-constraint-inference-from-user-demonstrations-based-on-margin-respecting-preference-models)
-   - **ICRL for Both Rewards and Constraints**
-     - [Bayesian Nonparametric IRL](#inferring-task-goals-and-constraints-using-bayesian-nonparametric-inverse-reinforcement-learning)
-     - [Distributed Inverse Constrained RL](#distributed-inverse-constrained-reinforcement-learning-for-multi-agent-systems)
-     - [Learning Multi-agent Behaviors](#learning-multi-agent-behaviors-from-distributed-and-streaming-demonstrations)
-     - [Meta Inverse Constrained RL](#meta-inverse-constrained-reinforcement-learning-convergence-guarantee-and-generalization-analysis)
-     - [Reward Decomposition in ICRL](#inverse-constraint-learning-and-generalization-by-transferable-reward-decomposition)
-
-5. **ICRL from Multiple Expert Agents**
-   - [Learning Safety Constraints with Shared Constraints](#learning-safety-constraints-from-demonstrations-with-unknown-rewards)
-   - [Shared Safety Constraints in Multi-task Demonstrations](#learning-shared-safety-constraints-from-multi-task-demonstrations)
-   - [Multi-modal ICRL](#multi-modal-inverse-constrained-reinforcement-learning-from-a-mixture-of-demonstrations)
 
 ## Importance of Inferring Constraints
 
