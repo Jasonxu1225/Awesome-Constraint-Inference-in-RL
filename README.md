@@ -6,58 +6,20 @@ Our survey paper *[A Comprehensive Survey on Inverse Constrained Reinforcement L
 
 This repository will be continuously updated. Welcome to follow and star it!
 
-# Table of Contents
+## Table of Contents
 
-1. **Introduction**
-   - [Overview](#awesome-constraint-inference-in-rl)
-   - [Importance of Inferring Constraints](#importance-of-inferring-constraints)
-   - [Procedure of ICRL](#procedure-of-icrl)
-
-2. **Constraint Inference in Inverse Optimal Control**
-   - [Learning Constraints from Demonstrations](#learning-constraints-from-demonstrations)
-   - [Learning Parametric Constraints](#learning-parametric-constraints)
-   - [Uncertainty-aware Constraint Learning](#uncertainty-aware-constraint-learning)
-   - [Constraint Inference in Control Tasks](#constraint-inference-in-control-tasks)
-   - [Efficient Learning of Constraints](#efficient-learning-of-constraints)
-   - [Learning Geometric Constraints](#learning-geometric-constraints)
-   - [Isoperimetric Constraint Inference](#isoperimetric-constraint-inference)
-   - [Trajectory-oriented Constraints](#trajectory-oriented-constraints)
-   - [Inferring Constraints in Shared Autonomy](#inferring-constraints-in-shared-autonomy)
-
-3. **Constraint Inference from Human Interventions**
-   - [Learning Constraints from Feedback](#learning-constraints-from-feedback)
-   - [Expert Intervention Learning](#expert-intervention-learning)
-
-4. **Inverse Constrained Reinforcement Learning**
-   - **ICRL in Deterministic Environments**
-     - [Maximum Likelihood Constraint Inference](#maximum-likelihood-constraint-inference)
-     - [Inverse Constrained Reinforcement Learning](#inverse-constrained-reinforcement-learning)
-     - [Positive-Unlabeled Constraint Learning](#positive-unlabeled-constraint-learning)
-     - [Simplifying Constraint Inference](#simplifying-constraint-inference)
-     - [Efficient Exploration in ICRL](#efficient-exploration-in-icrl)
-   - **ICRL in Stochastic Environments**
-     - [Maximum Likelihood Constraint Inference in Stochastic Environments](#maximum-likelihood-constraint-inference-in-stochastic-environments)
-     - [Maximum Causal Entropy ICRL](#maximum-causal-entropy-icrl)
-     - [Learning Soft Constraints](#learning-soft-constraints)
-     - [Robust ICRL](#robust-icrl)
-   - **ICRL from Limited Demonstrations**
-     - [Bayesian Methods for Constraint Inference](#bayesian-methods-for-constraint-inference)
-     - [Benchmarking Constraint Inference](#benchmarking-constraint-inference)
-     - [Confidence-aware ICRL](#confidence-aware-icrl)
-     - [Uncertainty-aware Constraint Inference](#uncertainty-aware-constraint-inference)
-     - [Learning Constraints from Offline Demonstrations](#learning-constraints-from-offline-demonstrations)
-     - [Preference-based Constraint Inference](#preference-based-constraint-inference)
-   - **ICRL for Both Rewards and Constraints**
-     - [Bayesian Nonparametric IRL](#bayesian-nonparametric-irl)
-     - [Distributed Inverse Constrained RL](#distributed-inverse-constrained-rl)
-     - [Learning Multi-agent Behaviors](#learning-multi-agent-behaviors)
-     - [Meta Inverse Constrained RL](#meta-inverse-constrained-rl)
-     - [Reward Decomposition in ICRL](#reward-decomposition-in-icrl)
-
-5. **ICRL from Multiple Expert Agents**
-   - [Learning Safety Constraints with Shared Constraints](#learning-safety-constraints-with-shared-constraints)
-   - [Shared Safety Constraints in Multi-task Demonstrations](#shared-safety-constraints-in-multi-task-demonstrations)
-   - [Multi-modal ICRL](#multi-modal-icrl)
+- [Awesome-Constraint-Inference-in-RL](#awesome-constraint-inference-in-rl)
+  - [Importance of Inferring Constraints](#importance-of-inferring-constraints)
+  - [Procedure of ICRL](#procedure-of-icrl)
+  - [Papers](#papers)
+    - [Constraint Inference in Inverse Optimal Control](#constraint-inference-in-inverse-optimal-control)
+    - [Constraint Inference from Human Interventions](#constraint-inference-from-human-interventions)
+    - [Inverse Constrained Reinforcement Learning](#inverse-constrained-reinforcement-learning)
+      - [ICRL in Deterministic Environments](#icrl-in-deterministic-environments)
+      - [ICRL in Stochastic Environments](#icrl-in-stochastic-environments)
+      - [ICRL from Limited Demonstrations](#icrl-from-limited-demonstrations)
+      - [ICRL for Both Rewards and Constraints](#icrl-for-both-rewards-and-constraints)
+      - [ICRL from Multiple Expert Agents](#icrl-from-multiple-expert-agents)
 
 
 ## Importance of Inferring Constraints
