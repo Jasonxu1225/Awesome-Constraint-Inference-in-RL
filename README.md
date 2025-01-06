@@ -1,9 +1,63 @@
 # Awesome-Constraint-Inference-in-RL
 
-A collection of research papers on constraint inference within the field of Reinforcement Learning (RL), with a primary focus on **Inverse Constrained Reinforcement Learning (ICRL)**. Our survey paper *[A Comprehensive Survey on Inverse Constrained Reinforcement Learning: Definitions, Progress and Challenges](https://openreview.net/pdf?id=WUQsBiJqyP)* has been accepted to TMLR 2025.
+A collection of research papers on constraint inference within the field of Reinforcement Learning (RL), with a primary focus on **Inverse Constrained Reinforcement Learning (ICRL)**. 
+
+Our survey paper *[A Comprehensive Survey on Inverse Constrained Reinforcement Learning: Definitions, Progress and Challenges](https://openreview.net/pdf?id=WUQsBiJqyP)* has been accepted to TMLR 2025.
 
 This repository will be continuously updated. Welcome to follow and star it!
 
+# Table of Contents
+
+1. **Introduction**
+   - [Overview](#awesome-constraint-inference-in-rl)
+   - [Importance of Inferring Constraints](#importance-of-inferring-constraints)
+   - [Procedure of ICRL](#procedure-of-icrl)
+
+2. **Constraint Inference in Inverse Optimal Control**
+   - [Learning Constraints from Demonstrations](#learning-constraints-from-demonstrations)
+   - [Learning Parametric Constraints](#learning-parametric-constraints)
+   - [Uncertainty-aware Constraint Learning](#uncertainty-aware-constraint-learning)
+   - [Constraint Inference in Control Tasks](#constraint-inference-in-control-tasks)
+   - [Efficient Learning of Constraints](#efficient-learning-of-constraints)
+   - [Learning Geometric Constraints](#learning-geometric-constraints)
+   - [Isoperimetric Constraint Inference](#isoperimetric-constraint-inference)
+   - [Trajectory-oriented Constraints](#trajectory-oriented-constraints)
+   - [Inferring Constraints in Shared Autonomy](#inferring-constraints-in-shared-autonomy)
+
+3. **Constraint Inference from Human Interventions**
+   - [Learning Constraints from Feedback](#learning-constraints-from-feedback)
+   - [Expert Intervention Learning](#expert-intervention-learning)
+
+4. **Inverse Constrained Reinforcement Learning**
+   - **ICRL in Deterministic Environments**
+     - [Maximum Likelihood Constraint Inference](#maximum-likelihood-constraint-inference)
+     - [Inverse Constrained Reinforcement Learning](#inverse-constrained-reinforcement-learning)
+     - [Positive-Unlabeled Constraint Learning](#positive-unlabeled-constraint-learning)
+     - [Simplifying Constraint Inference](#simplifying-constraint-inference)
+     - [Efficient Exploration in ICRL](#efficient-exploration-in-icrl)
+   - **ICRL in Stochastic Environments**
+     - [Maximum Likelihood Constraint Inference in Stochastic Environments](#maximum-likelihood-constraint-inference-in-stochastic-environments)
+     - [Maximum Causal Entropy ICRL](#maximum-causal-entropy-icrl)
+     - [Learning Soft Constraints](#learning-soft-constraints)
+     - [Robust ICRL](#robust-icrl)
+   - **ICRL from Limited Demonstrations**
+     - [Bayesian Methods for Constraint Inference](#bayesian-methods-for-constraint-inference)
+     - [Benchmarking Constraint Inference](#benchmarking-constraint-inference)
+     - [Confidence-aware ICRL](#confidence-aware-icrl)
+     - [Uncertainty-aware Constraint Inference](#uncertainty-aware-constraint-inference)
+     - [Learning Constraints from Offline Demonstrations](#learning-constraints-from-offline-demonstrations)
+     - [Preference-based Constraint Inference](#preference-based-constraint-inference)
+   - **ICRL for Both Rewards and Constraints**
+     - [Bayesian Nonparametric IRL](#bayesian-nonparametric-irl)
+     - [Distributed Inverse Constrained RL](#distributed-inverse-constrained-rl)
+     - [Learning Multi-agent Behaviors](#learning-multi-agent-behaviors)
+     - [Meta Inverse Constrained RL](#meta-inverse-constrained-rl)
+     - [Reward Decomposition in ICRL](#reward-decomposition-in-icrl)
+
+5. **ICRL from Multiple Expert Agents**
+   - [Learning Safety Constraints with Shared Constraints](#learning-safety-constraints-with-shared-constraints)
+   - [Shared Safety Constraints in Multi-task Demonstrations](#shared-safety-constraints-in-multi-task-demonstrations)
+   - [Multi-modal ICRL](#multi-modal-icrl)
 
 
 ## Importance of Inferring Constraints
@@ -39,7 +93,7 @@ In the typical preference modeling approach, the agent must first recover the re
   - ` Parametric Constraints` `Continuous`
 
 - [Uncertainty-aware constraint learning for adaptive safe motion planning from demonstrations](https://proceedings.mlr.press/v155/chou21a/chou21a.pdf) [CoRL 2020]
-  - Glen Chou, Necmiye Ozay, Dmitry Berenson
+  - Glen Chou, Dmitry Berenson, Necmiye Ozay
   - Devise uncertainty-aware constraints driven by Bayesian inference
   - ` Uncertainty-aware Constraints` `Continuous`
 
@@ -50,11 +104,11 @@ In the typical preference modeling approach, the agent must first recover the re
 
 - [Efficient learning of constraints and generic null space policies](https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=7989181) [ICRA 2017]
   - Leopoldo Armesto, Jorren Bosga, Vladimir Ivan, Sethu Vijayakumar
-  - Focus on learning geometric constraints
+  - Present a fast and accurate approach to learning constraints from observations
   - `Geometric Constraints`
 
 - [C-learn: Learning geometric constraints from demonstrations for multi-step manipulation in shared autonomy](https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=7989466) [ICRA 2017]
-  - Leopoldo Armesto, Jorren Bosga, Vladimir Ivan, Sethu Vijayakumar
+  - Claudia P ́erez-D’Arpino, Julie A. Shah
   - Learn multi-step manipulation tasks from demonstrations as a sequence of key frames and a set of geometric constraints
   - `Geometric Constraints`
 
@@ -75,7 +129,7 @@ In the typical preference modeling approach, the agent must first recover the re
 
 ### Constraint Inference from Human Interventions
 
-- [Learning Constraints on Autonomous Behavior from Proactive Feedback](https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=10341801) [IROS 2023]
+- [Learning constraints on autonomous behavior from proactive feedback](https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=10341801) [IROS 2023]
   - Connor Basich, Saaduddin Mahmud, Shlomo Zilberstein
   - Assume access only to sparse interventions, and infer constraints from human interventions without full or partial demonstration trajectories
   - `Constraint Set`
@@ -89,20 +143,30 @@ In the typical preference modeling approach, the agent must first recover the re
 
 #### ICRL in Deterministic Environments
 
-- [Maximum Likelihood Constraint Inference for Inverse Reinforcement Learning](https://arxiv.org/pdf/1909.05477) [ICLR 2020]
+- [Maximum likelihood constraint inference for inverse reinforcement learning](https://arxiv.org/pdf/1909.05477) [ICLR 2020]
   - Dexter R.R. Scobee, S. Shankar Sastry
   - Infer the maximum likelihood constraint to best explain observed behavior under the maximum entropy principle
   - `Maximum Entropy` `Discrete`
 
-- [Inverse Constrained Reinforcement Learning](http://proceedings.mlr.press/v139/malik21a/malik21a.pdf) [ICML 2021]
+- [Inverse constrained reinforcement learning](http://proceedings.mlr.press/v139/malik21a/malik21a.pdf) [ICML 2021]
   - Shehryar Malik, Usman Anwar, Alireza Aghasi, Ali Ahmed
   - Propose learning a binary classifier as a feasibility function approximator to determine the probability that performing one action under one state is feasible
   - `Maximum Entropy` `Continuous`
 
-- [Positive-Unlabeled Constraint Learning for Inferring Nonlinear Continuous Constraints Functions From Expert Demonstrations](http://proceedings.mlr.press/v139/malik21a/malik21a.pdf) [RAL 2024]
+- [Positive-unlabeled constraint learning for inferring nonlinear continuous constraints functions from expert demonstrations](http://proceedings.mlr.press/v139/malik21a/malik21a.pdf) [RAL 2024]
   - Baiyu Peng, Aude Billard
   - Propose a two-step Positive-Unlabeled Constraint Learning (PUCL) method to identify reliable infeasible data and then train a binary feasibility classifier as a constraint function
   - `Positive-Unlabeled Learning`
+
+- [Simplifying constraint inference with inverse reinforcement learning](https://openreview.net/pdf?id=T5Cerv7PT2) [NeurIPS 2024]
+  - Adriana Hugessen, Harley Wiltzer, Glen Berseth
+  - Explore whether we can apply an IRL algorithm to recover a modified reward function and learn an imitation policy without considering the constrained optimization objective
+  - `Without Constraints` `Modified Rewards`
+
+- [Provably efficient exploration in inverse constrained reinforcement learning](https://arxiv.org/pdf/2409.15963) [Arxiv 2024]
+  - Bo Yue, Jian Li, Guiliang Liu
+  - Introduce a strategic exploration framework with guaranteed efficiency to achieve efficient constraint inference
+  - `Efficiency`
 
 #### ICRL in Stochastic Environments
 
@@ -121,6 +185,11 @@ In the typical preference modeling approach, the agent must first recover the re
   - Employ the Deep Constraint Correction framework to learn soft constraints, which transforms a constrained problem into an unconstrained problem by introducing a non-differentiable ReLU term
   - `Soft Constraints` `Continuous`
 
+- [Robust inverse constrained reinforcement learning under model misspecification](https://openreview.net/pdf?id=pkUl39b0in) [ICML 2024]
+  - Sheng Xu, Guiliang Liu
+  - Propose the Robust Constraint Inference (RCI) problem and an Adaptively Robust ICRL (AR-ICRL) algorithm to solve RCI efficiently under mismatched transition dynamics
+  -  `Robust Constraints` `Transition Mismatch`
+
 #### ICRL from Limited Demonstrations
 
 - [Bayesian methods for constraint inference in reinforcement learning](https://openreview.net/pdf?id=oRjk5V9eDp) [TMLR 2023]
@@ -138,17 +207,17 @@ In the typical preference modeling approach, the agent must first recover the re
   - Ensure that only those constraints that meet a desired confidence threshold are utilized by incorporating a confidence level alongside a set of expert demonstrations
   -  `Confidence-aware`
 
-- [Uncertainty-aware Constraint Inference in Inverse Constrained Reinforcement Learning](https://openreview.net/pdf?id=ILYjDvUM6U) [ICLR 2024]
+- [Uncertainty-aware constraint inference in inverse constrained reinforcement learning](https://openreview.net/pdf?id=ILYjDvUM6U) [ICLR 2024]
   - Sheng Xu, Guiliang Liu
   - Propose expanding the training dataset by adding generated trajectories through flow-based trajectory generation based on GFlowNets
   -  `Data-augmented` `Uncertainty-aware`
 
-- [Learning Constraints from Offline Demonstrations via Superior Distribution Correction Estimation](https://openreview.net/pdf?id=Ax90jQPbgF) [ICML 2024]
+- [Learning constraints from offline demonstrations via superior distribution correction estimation](https://openreview.net/pdf?id=Ax90jQPbgF) [ICML 2024]
   - Guorui Quan, Guiliang Liu
   - Consider the offline setting where the agent has no access to the environment for interactions, which transfer the constraint inference problem to the problem of estimating the superior distributions set
   -  `Offline`
 
-- [Bayesian Constraint Inference from User Demonstrations Based on Margin-Respecting Preference Models](https://arxiv.org/pdf/2403.02431) [ICRA 2024]
+- [Bayesian constraint inference from user demonstrations based on margin-respecting preference models](https://arxiv.org/pdf/2403.02431) [ICRA 2024]
   - Dimitris Papadimitriou, Daniel S. Brown
   - Explore an alternative scenario in which preferences among demonstrations are available by extending the Bradley-Terry model to the context of constraint inference
   -  `Preference-based`
@@ -169,12 +238,12 @@ In the typical preference modeling approach, the agent must first recover the re
   - Propose a novel “multi-agent behavior inference from distributed and streaming demonstrations" (MA-BIRDS) algorithm that allows the learners to solve the bi-level problem
   - `Multi-agent` `Bi-level`
 
-- [Meta inverse constrained reinforcement learning: Convergence guarantee and generalization analysis](https://openreview.net/pdf?id=bJ3gFiwRgi) [ICLR 2024]
+- [Meta inverse constrained reinforcement learning: convergence guarantee and generalization analysis](https://openreview.net/pdf?id=bJ3gFiwRgi) [ICLR 2024]
   - Shicheng Liu, Minghui Zhu
   - Formulate a bi-level optimization problem where the upper level aims to learn a meta-prior over reward functions and the lower level is to learn a meta-prior over constraints
   - `Meta-learning` `Bi-level`
 
-- [Inverse Constraint Learning and Generalization by Transferable Reward Decomposition](https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=10319083) [RA-L 2024]
+- [Inverse constraint learning and generalization by transferable reward decomposition](https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=10319083) [RA-L 2024]
   - Jaehwi Jang, Minjae Song, Daehyung Park
   - Propose decomposing the reward function into task reward and the constraint-related residual reward, given the constrained demonstrations and the task reward space
   - `Reward Decomposition`
