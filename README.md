@@ -194,5 +194,3 @@ In the typical preference modeling approach, the agent must first recover the re
   - Guanren Qiao, Guiliang Liu, Pascal Poupart, Zhiqiang Xu
   - Study expert data that record demonstrations from multiple experts who respect different kinds of constraints, and propose a Multi-Modal Inverse Constrained Reinforcement Learning (MM-ICRL) algorithm that performs unsupervised agent identification and multi-modal policy optimization to learn agent-specific constraints
   - `Multi-modal Constraint`
-
-Continuing...
