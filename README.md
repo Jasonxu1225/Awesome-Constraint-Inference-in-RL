@@ -202,7 +202,7 @@ In the typical preference modeling approach, the agent must first recover the re
 - [Toward Exploratory Inverse Constraint Inference with Generative Diffusion Verifiers](https://openreview.net/pdf?id=0UvlnHgaii) [ICLR 2025]
   - Runyi Zhao, Sheng Xu, Bo Yue, Guiliang Liu
   - Propose an exploratory inverse constraint learning algorithm for inferring a diverse set of feasible constraints from offline dataset.
-  -  `Offline` `Generative`
+  -  `Offline` `Generative Model`
 
 - [Bayesian constraint inference from user demonstrations based on margin-respecting preference models](https://arxiv.org/pdf/2403.02431) [ICRA 2024]
   - Dimitris Papadimitriou, Daniel S. Brown
