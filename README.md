@@ -89,6 +89,11 @@ In the typical preference modeling approach, the agent must first recover the re
   - Introduce a method for inferring constraints from operator input, along with a confidence-based way of assisting the user in maintaining them, and evaluate in a user study
   - `Trajectory-oriented Constraints`
 
+- [Your Learned Constraint is Secretly a Backward Reachable Tube](https://arxiv.org/pdf/2501.15618) [Arxiv 2025]
+  - Mohamad Qadri, Gokul Swamy, Jonathan Francis, Michael Kaess, Andrea Bajcsy
+  - Explore the question of what mathematical entity ICL recovers, and recover a backwards reachable tube (BRT) rather than a failure set.
+  - `Backwards Reachable Tube`
+
 ### Constraint Inference from Human Interventions
 
 - [Learning constraints on autonomous behavior from proactive feedback](https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=10341801) [IROS 2023]
@@ -125,11 +130,6 @@ In the typical preference modeling approach, the agent must first recover the re
   - Explore whether we can apply an IRL algorithm to recover a modified reward function and learn an imitation policy without considering the constrained optimization objective
   - `Without Constraints` `Modified Rewards`
 
-- [Provably efficient exploration in inverse constrained reinforcement learning](https://arxiv.org/pdf/2409.15963) [Arxiv 2024]
-  - Bo Yue, Jian Li, Guiliang Liu
-  - Introduce a strategic exploration framework with guaranteed efficiency to achieve efficient constraint inference
-  - `Efficiency`
-
 #### ICRL in Stochastic Environments
 
 - [Maximum likelihood constraint inference from stochastic demonstrations](https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=9658862) [CCTA 2021]
@@ -147,10 +147,25 @@ In the typical preference modeling approach, the agent must first recover the re
   - Employ the Deep Constraint Correction framework to learn soft constraints, which transforms a constrained problem into an unconstrained problem by introducing a non-differentiable ReLU term
   - `Soft Constraints` `Continuous`
 
+- [Learning soft constraints from constrained expert demonstrations](https://arxiv.org/pdf/2206.01311) [ICLR 2023]
+  - Ashish Gaurav, Kasra Rezaee, Guiliang Liu, Pascal Poupart
+  - Employ the Deep Constraint Correction framework to learn soft constraints, which transforms a constrained problem into an unconstrained problem by introducing a non-differentiable ReLU term
+  - `Soft Constraints` `Continuous`
+
 - [Robust inverse constrained reinforcement learning under model misspecification](https://openreview.net/pdf?id=pkUl39b0in) [ICML 2024]
   - Sheng Xu, Guiliang Liu
   - Propose the Robust Constraint Inference (RCI) problem and an Adaptively Robust ICRL (AR-ICRL) algorithm to solve RCI efficiently under mismatched transition dynamics
-  -  `Robust Constraints` `Transition Mismatch`
+  - `Robust Constraints` `Transition Mismatch`
+
+- [Provably efficient exploration in inverse constrained reinforcement learning](https://arxiv.org/pdf/2409.15963) [Arxiv 2024]
+  - Bo Yue, Jian Li, Guiliang Liu
+  - Introduce a strategic exploration framework with guaranteed efficiency to achieve efficient constraint inference
+  - `Efficiency`
+
+- [Understanding Constraint Inference in Safety-Critical Inverse Reinforcement Learning](https://openreview.net/pdf?id=B2RXwASSpy) [ICLR 2025]
+  - Bo Yue, Shufan Wang, Ashish Gaurav, Jian Li, Pascal Poupart, Guiliang Liu
+  - Conduct a theoretical analysis comparing the sample complexities of both solvers
+  - `Efficiency` `Transferability`
 
 #### ICRL from Limited Demonstrations
 
@@ -172,17 +187,37 @@ In the typical preference modeling approach, the agent must first recover the re
 - [Uncertainty-aware constraint inference in inverse constrained reinforcement learning](https://openreview.net/pdf?id=ILYjDvUM6U) [ICLR 2024]
   - Sheng Xu, Guiliang Liu
   - Propose expanding the training dataset by adding generated trajectories through flow-based trajectory generation based on GFlowNets
-  -  `Data-augmented` `Uncertainty-aware`
+  - `Data-augmented` `Uncertainty-aware`
+
+- [DIAL: Distribution-Informed Adaptive Learning of Multi-Task Constraints for Safety-Critical Systems](https://arxiv.org/pdf/2501.18086) [Arxiv 2025]
+  - Se-Wook Yoo, Seung-Woo Seo
+  - Propose a novel method to learn shared constraint distributions across multiple tasks
+  -  `Shared-constraints` `Risk-aware`
 
 - [Learning constraints from offline demonstrations via superior distribution correction estimation](https://openreview.net/pdf?id=Ax90jQPbgF) [ICML 2024]
   - Guorui Quan, Guiliang Liu
   - Consider the offline setting where the agent has no access to the environment for interactions, which transfer the constraint inference problem to the problem of estimating the superior distributions set
-  -  `Offline`
+  - `Offline`
+
+- [Toward Exploratory Inverse Constraint Inference with Generative Diffusion Verifiers](https://openreview.net/pdf?id=0UvlnHgaii) [ICLR 2025]
+  - Runyi Zhao, Sheng Xu, Bo Yue, Guiliang Liu
+  - Propose an exploratory inverse constraint learning algorithm for inferring a diverse set of feasible constraints from offline dataset.
+  -  `Offline` `Generative`
 
 - [Bayesian constraint inference from user demonstrations based on margin-respecting preference models](https://arxiv.org/pdf/2403.02431) [ICRA 2024]
   - Dimitris Papadimitriou, Daniel S. Brown
   - Explore an alternative scenario in which preferences among demonstrations are available by extending the Bradley-Terry model to the context of constraint inference
-  -  `Preference-based`
+  - `Preference-based`
+
+- [Offline Inverse Constrained Reinforcement Learning for Safe-Critical Decision Making in Healthcare](https://arxiv.org/pdf/2410.07525) [Arxiv 2024]
+  - Nan Fang, Guiliang Liu, Wei Gong
+  - Apply ICRL to healthcare applications
+  - `Offline` `Healthcare`
+
+- [Learning Soft Driving Constraints from Vectorized Scene Embeddings while Imitating Expert Trajectories](https://arxiv.org/pdf/2412.05717) [Arxiv 2024]
+  - Niloufar Saeidi Mobarakeh, Behzad Khamidehi, Chunlin Li, Hamidreza Mirkhani, Fazel Arasteh, Mohammed Elmahgiubi, Weize Zhang, Kasra Rezaee, Pascal Poupart
+  - Apply ICRL to traffic applications
+  - `Offline` `Motion Planning`
 
 #### ICRL for Both Rewards and Constraints
 - [Inferring task goals and constraints using bayesian nonparametric inverse reinforcement learning](http://proceedings.mlr.press/v100/park20a/park20a.pdf) [CoRL 2019]
