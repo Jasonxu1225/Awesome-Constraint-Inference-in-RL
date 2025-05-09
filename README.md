@@ -157,7 +157,7 @@ In the typical preference modeling approach, the agent must first recover the re
   - Propose the Robust Constraint Inference (RCI) problem and an Adaptively Robust ICRL (AR-ICRL) algorithm to solve RCI efficiently under mismatched transition dynamics
   - `Robust Constraints` `Transition Mismatch`
 
-- [Provably efficient exploration in inverse constrained reinforcement learning](https://arxiv.org/pdf/2409.15963) [Arxiv 2024]
+- [Provably efficient exploration in inverse constrained reinforcement learning](https://arxiv.org/pdf/2409.15963) [ICML 2025]
   - Bo Yue, Jian Li, Guiliang Liu
   - Introduce a strategic exploration framework with guaranteed efficiency to achieve efficient constraint inference
   - `Efficiency`
