@@ -44,6 +44,26 @@ In the typical preference modeling approach, the agent must first recover the re
 
 ### Constraint Inference in Inverse Optimal Control
 
+- [Learning object orientation constraints and guiding constraints for narrow passages from one demonstration](https://web.cs.wpi.edu/~rich/heres_how/pub/LiBerenson2016_ISER.pdf) [ISER 2016]
+  - Changshuo Li, Dmitry Berenson
+  - Explore the area around the demonstration trajectory through sampling in task space, and learn constraints by segmenting and analyzing the feasible samples
+  - `Trajectory-oriented Constraints`
+ 
+- [Inferring and assisting with constraints in shared autonomy](https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=7799299) [CDC 2016]
+  - Negar Mehr, Roberto Horowitz, Anca D. Dragan
+  - Introduce a method for inferring constraints from operator input, along with a confidence-based way of assisting the user in maintaining them, and evaluate in a user study
+  - `Trajectory-oriented Constraints`
+
+- [Efficient learning of constraints and generic null space policies](https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=7989181) [ICRA 2017]
+  - Leopoldo Armesto, Jorren Bosga, Vladimir Ivan, Sethu Vijayakumar
+  - Present a fast and accurate approach to learning constraints from observations
+  - `Geometric Constraints`
+ 
+- [C-learn: Learning geometric constraints from demonstrations for multi-step manipulation in shared autonomy](https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=7989466) [ICRA 2017]
+  - Claudia P ́erez-D’Arpino, Julie A. Shah
+  - Learn multi-step manipulation tasks from demonstrations as a sequence of key frames and a set of geometric constraints
+  - `Geometric Constraints`
+
 - [Learning constraints from demonstrations](https://arxiv.org/pdf/1812.07084) [Workshop 2018]
   - Glen Chou, Dmitry Berenson, Necmiye Ozay
   - Address the forward problem with the hit-and-run sampling algorithm
@@ -64,30 +84,10 @@ In the typical preference modeling approach, the agent must first recover the re
   - Propose an incremental greedy constraint inference algorithm
   - `Constraint Set`
 
-- [Efficient learning of constraints and generic null space policies](https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=7989181) [ICRA 2017]
-  - Leopoldo Armesto, Jorren Bosga, Vladimir Ivan, Sethu Vijayakumar
-  - Present a fast and accurate approach to learning constraints from observations
-  - `Geometric Constraints`
-
-- [C-learn: Learning geometric constraints from demonstrations for multi-step manipulation in shared autonomy](https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=7989466) [ICRA 2017]
-  - Claudia P ́erez-D’Arpino, Julie A. Shah
-  - Learn multi-step manipulation tasks from demonstrations as a sequence of key frames and a set of geometric constraints
-  - `Geometric Constraints`
-
 - [Isoperimetric constraint inference for discrete-time nonlinear systems based on inverse optimal control](https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=10471228) [IEEE Transactions on Cybernetics 2024]
   - Qinglai Wei, Tao Li, Jie Zhang, Hongyang Li, Xin Wang, Jun Xiao
   - Infer the unknown isoperimetric constraints given optimal state and control trajectories
   - `Isoperimetric Constraints`
-
-- [Learning object orientation constraints and guiding constraints for narrow passages from one demonstration](https://web.cs.wpi.edu/~rich/heres_how/pub/LiBerenson2016_ISER.pdf) [ISER 2016]
-  - Changshuo Li, Dmitry Berenson
-  - Explore the area around the demonstration trajectory through sampling in task space, and learn constraints by segmenting and analyzing the feasible samples
-  - `Trajectory-oriented Constraints`
-
-- [Inferring and assisting with constraints in shared autonomy](https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=7799299) [CDC 2016]
-  - Negar Mehr, Roberto Horowitz, Anca D. Dragan
-  - Introduce a method for inferring constraints from operator input, along with a confidence-based way of assisting the user in maintaining them, and evaluate in a user study
-  - `Trajectory-oriented Constraints`
 
 - [Your Learned Constraint is Secretly a Backward Reachable Tube](https://arxiv.org/pdf/2501.15618) [Arxiv 2025]
   - Mohamad Qadri, Gokul Swamy, Jonathan Francis, Michael Kaess, Andrea Bajcsy
@@ -96,15 +96,15 @@ In the typical preference modeling approach, the agent must first recover the re
 
 ### Constraint Inference from Human Interventions
 
-- [Learning constraints on autonomous behavior from proactive feedback](https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=10341801) [IROS 2023]
-  - Connor Basich, Saaduddin Mahmud, Shlomo Zilberstein
-  - Assume access only to sparse interventions, and infer constraints from human interventions without full or partial demonstration trajectories
-  - `Constraint Set`
-
 - [Expert intervention learning: An online framework for robot learning from explicit and implicit human feedback](https://personalrobotics.cs.washington.edu/publications/spencer2022eil.pdf) [Autonomous Robots 2022]
   - Jonathan Spencer, Sanjiban Choudhury, Matthew Barnes, Matthew Schmittle, Mung Chiang, Peter Ramadge, Sidd Srinivasa
   - Formalize interventions as action-value constraints
   - `Intervention Constraints`
+
+- [Learning constraints on autonomous behavior from proactive feedback](https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=10341801) [IROS 2023]
+  - Connor Basich, Saaduddin Mahmud, Shlomo Zilberstein
+  - Assume access only to sparse interventions, and infer constraints from human interventions without full or partial demonstration trajectories
+  - `Constraint Set`
 
 ### Inverse Constrained Reinforcement Learning
 
@@ -189,20 +189,10 @@ In the typical preference modeling approach, the agent must first recover the re
   - Propose expanding the training dataset by adding generated trajectories through flow-based trajectory generation based on GFlowNets
   - `Data-augmented` `Uncertainty-aware`
 
-- [DIAL: Distribution-Informed Adaptive Learning of Multi-Task Constraints for Safety-Critical Systems](https://arxiv.org/pdf/2501.18086) [Arxiv 2025]
-  - Se-Wook Yoo, Seung-Woo Seo
-  - Propose a novel method to learn shared constraint distributions across multiple tasks
-  -  `Shared-constraints` `Risk-aware`
-
 - [Learning constraints from offline demonstrations via superior distribution correction estimation](https://openreview.net/pdf?id=Ax90jQPbgF) [ICML 2024]
   - Guorui Quan, Guiliang Liu
   - Consider the offline setting where the agent has no access to the environment for interactions, which transfer the constraint inference problem to the problem of estimating the superior distributions set
   - `Offline`
-
-- [Toward Exploratory Inverse Constraint Inference with Generative Diffusion Verifiers](https://openreview.net/pdf?id=0UvlnHgaii) [ICLR 2025]
-  - Runyi Zhao, Sheng Xu, Bo Yue, Guiliang Liu
-  - Propose an exploratory inverse constraint learning algorithm for inferring a diverse set of feasible constraints from offline dataset.
-  -  `Offline` `Generative Model`
 
 - [Bayesian constraint inference from user demonstrations based on margin-respecting preference models](https://arxiv.org/pdf/2403.02431) [ICRA 2024]
   - Dimitris Papadimitriou, Daniel S. Brown
@@ -218,8 +208,19 @@ In the typical preference modeling approach, the agent must first recover the re
   - Niloufar Saeidi Mobarakeh, Behzad Khamidehi, Chunlin Li, Hamidreza Mirkhani, Fazel Arasteh, Mohammed Elmahgiubi, Weize Zhang, Kasra Rezaee, Pascal Poupart
   - Apply ICRL to traffic applications
   - `Offline` `Motion Planning`
+ 
+- [Toward Exploratory Inverse Constraint Inference with Generative Diffusion Verifiers](https://openreview.net/pdf?id=0UvlnHgaii) [ICLR 2025]
+  - Runyi Zhao, Sheng Xu, Bo Yue, Guiliang Liu
+  - Propose an exploratory inverse constraint learning algorithm for inferring a diverse set of feasible constraints from offline dataset.
+  -  `Offline` `Generative Model`
+ 
+- [DIAL: Distribution-Informed Adaptive Learning of Multi-Task Constraints for Safety-Critical Systems](https://arxiv.org/pdf/2501.18086) [Arxiv 2025]
+  - Se-Wook Yoo, Seung-Woo Seo
+  - Propose a novel method to learn shared constraint distributions across multiple tasks
+  -  `Shared-constraints` `Risk-aware`
 
 #### ICRL for Both Rewards and Constraints
+
 - [Inferring task goals and constraints using bayesian nonparametric inverse reinforcement learning](http://proceedings.mlr.press/v100/park20a/park20a.pdf) [CoRL 2019]
   - Daehyung Park, Michael Noseworthy, Rohan Paul, Subhro Roy, Nicholas Roy
   - Propose a Constraint-based Bayesian Nonparametric IRL (CBN-IRL) algorithm that learns multiple local rewards/goals and local constraints from different expert trajectory segments
@@ -246,11 +247,6 @@ In the typical preference modeling approach, the agent must first recover the re
   - `Reward Decomposition`
 
 #### ICRL from Multiple Expert Agents
-- [Learning safety constraints from demonstrations with unknown rewards](https://proceedings.mlr.press/v238/lindner24a/lindner24a.pdf) [AISTATS 2024]
-  - David Lindner, Xin Chen, Sebastian Tschiatschek, Katja Hofmann, Andreas Krause
-  - Study a setting where the expert agents optimize different rewards under a shared constraint, and define the safe set as the convex hull of the feature expectations of the expert demonstrations
-  - `Shared Constraint`
-
 - [Learning shared safety constraints from multi-task demonstrations](https://proceedings.neurips.cc/paper_files/paper/2023/file/124dde499d62b58e97e42a45b26d7369-Paper-Conference.pdf) [NeurIPS 2023]
   - Konwoo Kim, Gokul Swamy, Zuxin Liu, Ding Zhao, Sanjiban Choudhury, Zhiwei Steven Wu
   - Additionally leverage side information in the form of a reasonable set of constraints, enabling policy performance guarantees.
@@ -260,3 +256,8 @@ In the typical preference modeling approach, the agent must first recover the re
   - Guanren Qiao, Guiliang Liu, Pascal Poupart, Zhiqiang Xu
   - Study expert data that record demonstrations from multiple experts who respect different kinds of constraints, and propose a Multi-Modal Inverse Constrained Reinforcement Learning (MM-ICRL) algorithm that performs unsupervised agent identification and multi-modal policy optimization to learn agent-specific constraints
   - `Multi-modal Constraint`
+ 
+- [Learning safety constraints from demonstrations with unknown rewards](https://proceedings.mlr.press/v238/lindner24a/lindner24a.pdf) [AISTATS 2024]
+  - David Lindner, Xin Chen, Sebastian Tschiatschek, Katja Hofmann, Andreas Krause
+  - Study a setting where the expert agents optimize different rewards under a shared constraint, and define the safe set as the convex hull of the feature expectations of the expert demonstrations
+  - `Shared Constraint`
